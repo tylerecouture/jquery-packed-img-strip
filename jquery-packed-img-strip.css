@@ -1,0 +1,30 @@
+div.pack figure {
+  padding: 4px;
+  border: 1px solid lightgray;
+  margin: 0;
+  font: italic normal 14px/normal serif;
+}
+
+div.pack > figure:not(:last-child) {
+  margin-right: 1%;
+}
+
+div.pack > figure > img {
+  width: 100%;
+  height: auto;
+}
+
+div.pack {
+  display: flex;
+}
+
+@media (max-width: 560px) {
+  .pack {
+    flex-wrap: wrap;
+  }
+  .pack figure:not(#duh) {
+    flex: 1 0 auto !important;
+    max-width: calc(100% - 10px);
+    margin: 0 0 10px;
+  }
+}
