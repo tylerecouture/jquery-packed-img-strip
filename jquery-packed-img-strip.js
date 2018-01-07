@@ -12,25 +12,17 @@
             // backgroundColor: "white"
         }, options );
 
-        console.log(this);
-
-        // return this.each(function() {
         //     // this should be a container div with a series of child elements within.
-        $(this).css({"display": "flex"})
-               .children().each( function() {
+        $(this).children().each( function() {
 
                   if($(this).is('img')) {
-                    var $img = $(this);
-                    var aspect = this.naturalWidth/this.naturalHeight;
+                    var img = this;
                   }
                   else { // <figure>
-                    $(this).css('width','100%');
-                    var $img = $(this).find('img');
-                    var aspect = $img[0].naturalWidth/$img[0].naturalHeight;
+                    var img = $(this).find('img')[0];
                   }
-                  $(this).wrap('<div class="pack-wrap" style="display:flex; flex: 0% ' + aspect + ' 1"  />')
-                  $img.css({"width": "100%", "height": "auto"})
-                      .addClass("pack-item");
+                  let aspect = img.naturalWidth/img.naturalHeight;
+                  $(this).css({flex: aspect + ''});
               });
 
         return this;
