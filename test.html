@@ -3,17 +3,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <style>
-  /* Suggested Styles */
-    .pack > div.pack-wrap:not(:last-child) {
-      margin-right: 1%;
-    }
-    .pack > div.pack-wrap > figure {
-      margin: 0;
-    }
-
-
-  </style>
+  <link rel="stylesheet" type="text/css" href="jquery-packed-img-strip.css">
 </head>
 
 <body>
@@ -56,7 +46,9 @@
 			  crossorigin="anonymous"></script>
   <script src="packed-responsive-strip.js"></script>
   <script>
-    $("div.pack").pack();
+	$(window).on('load', function() {
+    		$("div.pack").pack();
+	});
   </script>
 </body>
 </html>
