@@ -20,3 +20,7 @@ Indluce the js file and call the plugin on your wrapper div:
     $("div.pack").pack();
 </script>
 ````
+
+# Working Example:
+
+https://rawgit.com/tylerecouture/packed-responsive-strip/master/test.html
