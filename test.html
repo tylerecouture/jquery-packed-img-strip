@@ -4,13 +4,23 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" type="text/css" href="jquery-packed-img-strip.css">
+  <style>
+    /* Example <figure>
+    </figure> style, similar to Bootstrap */
+    figure {
+      padding: 4px;
+      border: 1px solid lightgray;
+      border-radius: 4px;
+    }
+  </style>
 </head>
 
 <body>
 <h3>Test of jQuery plugin: packed-responsive-strip.js</h3>
 
 <div class='pack'>
-  <img src="http://via.placeholder.com/600x150"/>
+  <img src="http://via.placeholder.com/300x300"/>
+  <img src="http://via.placeholder.com/450x150"/>
   <img src="http://via.placeholder.com/150x500"/>
   <img src="http://via.placeholder.com/300x300"/>
 </div>
@@ -19,12 +29,8 @@
 </p>
 <div class='pack'>
   <figure>
-    <img src="http://via.placeholder.com/600x150">
-    <figcaption>Caption here</figcaption>
-  </figure>
-  <figure>
     <img src="http://via.placeholder.com/300x300">
-    <figcaption>Caption here</figcaption>
+    <figcaption>Big cap tion Caption here Big cap tion Capt ion here </figcaption>
   </figure>
   <figure>
     <img src="http://via.placeholder.com/300x500">
@@ -44,7 +50,7 @@
 			  src="https://code.jquery.com/jquery-3.2.1.min.js"
 			  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 			  crossorigin="anonymous"></script>
-  <script src="packed-responsive-strip.js"></script>
+  <script src="jquery-packed-img-strip.js"></script>
   <script>
 	$(window).on('load', function() {
     		$("div.pack").pack();
