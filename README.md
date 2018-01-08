@@ -4,7 +4,7 @@ A jquery plugin to pack various height elements, currently supports images or fi
 ### Use:
 Include the js file
 
-Wrap your images or figures in a div:
+Wrap your images or figures in a div with the class "pack":
 ````
 <div class='pack'>
   <img src="http://via.placeholder.com/600x150"/>
@@ -13,11 +13,14 @@ Wrap your images or figures in a div:
 </div>
 ````
 
-Indluce the js file and call the plugin on your wrapper div:
+Incluce jquery and the js file, then call the plugin on your "pack" div after images have loaded:
 ````
-<script src="packed-responsive-strip.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"</script>
+<script src="jquery-packed-img-strip.js"></script>
 <script>
-    $("div.pack").pack();
+$(window).on('load', function() {
+      $("div.pack").pack();
+});
 </script>
 ````
 
